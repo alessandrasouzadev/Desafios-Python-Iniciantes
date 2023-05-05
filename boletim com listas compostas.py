@@ -1,37 +1,33 @@
-indice = []
-nome = []
-notas = []
-media = []
-alunos = [indice,nome,notas,media]
+alunos = list()
+temp = list()
 ind = -1
 
 while True:
-
-    name = str(input('Nome: '))
-    nome.append(name)
-
-    one = float(input('Nota 1: '))
-    notas.append(one)
-    two = float(input('Nota 2: '))
-    notas.append(two)
-
-    res = one + two/2
-    media.append(res)
-
+    nome = str(input("Nome: "))
+    nota1 = float(input("Nota 1: "))
+    nota2 = float(input("Nota 2: "))
+    media = (nota1+nota2)/2
     ind += 1
-    indice.append(ind)
+    temp.extend([ind,nome, nota1, nota2, media])
+    alunos.append(temp[:])
+    temp.clear()
 
-    resp = str(input('Quer continuar? [S/N] '))
+    resp = str(input("Quer continuar?  [S/N] "))
     if resp in 'Nn':
         break
-print('-=' * 40)
-print('N°.   NOME              MÉDIA')
+
+print('-='*40)
+print('N°.     NOME          MÉDIA')
 print('-'*30)
 
-for i in indice:
-    print(f'{indice[i]: <5} {nome[i]: <10} {media[i]: >10}')
+for i in alunos:
+    print(f'{i[0]:<5} {i[1]:<5} {i[4]:>15}')
+print('-'*30)
 
-
+while True:
+    escolha = int(input("Mostrar notas de qual aluno? (999 interrompe): "))
+    if escolha == 999:
+        break
 
 
 
