@@ -28,6 +28,6 @@ while True:
     escolha = int(input("Mostrar notas de qual aluno? (999 interrompe): "))
     if escolha == 999:
         break
-
+#RETORNO DO DADO PRETENDIDO DENTRO DA LISTA
 
 
