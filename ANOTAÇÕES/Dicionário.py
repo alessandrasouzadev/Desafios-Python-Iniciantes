@@ -41,7 +41,7 @@ locadora ['título'] = 'Star Wars', 'Avengers', 'Matrix'
 locadora ['ano'] = 1977, 2012, 1999
 locadora ['diretor'] = 'George Lucas', 'Joss Whedon', 'Wachowski'
 print(locadora)
-
+#não funciona pratica, se sobresceve
 
 #EXEMPLO DE DICIONÁRIO DENTRO DE LISTA
 
@@ -102,3 +102,18 @@ for e in brasil:
     for v in e.values():
         print(v, end=' ')
     print()
+
+#ORDENANDO DICIONÁRIOS PELOS VALORES
+from random import randint
+from time import sleep
+from operator import itemgetter
+jogo = {'Jogador1': randint(0,6),
+        'Jogador2': randint(0,6),
+        'Jogador3': randint(0,6),
+        'Jogador4': randint(0,6),
+        }
+ranking = dict()
+ranking = sorted(jogo.items(), key=itemgetter(1), reverse=True)
+for i, v in enumerate(ranking):
+    print(f'{i+1}° lugar: {v[0]} com {v[1]}.')
+    sleep(1)

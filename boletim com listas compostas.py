@@ -15,11 +15,11 @@ while True:
         break
 
 print('-='*40)
-print('N°.     NOME          MÉDIA')
+print(f'{"N°.":<4}{"NOME":<10}{"MÉDIA":>12}')
 print('-'*30)
 
 for i in ficha:
-    print(f'{i[0]:<5} {i[1]:<5} {i[3]:>15}')
+    print(f'{i[0]:<4} {i[1]:<10} {i[3]:>8.1f}')
 print('-'*30)
 
 #VERIFICAÇÃO DE NOTAS
