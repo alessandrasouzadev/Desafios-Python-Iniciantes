@@ -17,6 +17,7 @@ for c in range(0,1):
         cadastro['aposentadoria'] = tcont - anodenasc
         cadastro['salario'] = float(input('Salário: R$ '))
 print('-'*15)
+print(cadastro)
 for k, v in cadastro.items():
     print(f'O {k} tem o valor {v}')
     
